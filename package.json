@@ -1,0 +1,34 @@
+{
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-latex": "^2.0.1"
+  },
+  "name": "second-attempt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bail": "^2.0.2",
+    "color": "^4.2.3",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
+    "color-string": "^1.9.1",
+    "extend": "^3.0.2",
+    "is-arrayish": "^0.3.2",
+    "is-buffer": "^2.0.5",
+    "is-plain-obj": "^4.1.0",
+    "simple-swizzle": "^0.2.2",
+    "trie-prefix-tree": "^1.5.1",
+    "trough": "^2.2.0",
+    "unified": "^10.1.2",
+    "unist-util-stringify-position": "^3.0.3",
+    "vfile": "^5.3.7",
+    "vfile-message": "^3.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --plugin=node_modules/prettier-plugin-latex/dist/prettier-plugin-latex.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
