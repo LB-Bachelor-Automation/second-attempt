@@ -1,3 +1,6 @@
+**/sections/**.pdf
+**/sections/**.ist
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
