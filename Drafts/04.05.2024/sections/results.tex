@@ -2,7 +2,11 @@
 
 \begin{document}
 \section{Results}
-The results' section presents the findings from the analysis of the accelerometer data collected during the simulated intrusion attempts on the MediColbox. The accelerometer data provides insights into the physical movements and vibrations experienced by the MediColbox during these intrusion scenarios.
+The results' section presents the findings from the analysis of
+the accelerometer data collected during the simulated intrusion attempts
+on the MediColbox.
+The accelerometer data provides insights into the physical movements
+and vibrations experienced by the MediColbox during these intrusion scenarios.
 
 \subsection{Analysis of Accelerometer Data}
 
@@ -34,17 +38,21 @@ striking event.
     \label{fig:accelerometer_striking}
 \end{figure}
 
-The Fourier analysis of the accelerometer data during the
-striking event is shown in
-Figure \ref{fig:fourier_accelerometer_striking}.
-The Fourier analysis allows us to examine the
-frequency components present in the accelerometer readings and
-provides insights into the characteristics of the
+Looking at the data we can clearly see the peak acceleration and how it
+stands out from the rest of the data visualized. However,
+how do we set criteria so that we can automatically claim
+an acceleration like this is an attempt of intrusion and not just a random event? A way we, during the data gathering, could reason for, was to find the force needed to break the box and estimate from the weight of the box how much acceleration would be close to breaking the box open. In this case the data gathering "Protoype" is $0.645 [kg]$. With the measured acceleration in $X$, $Y$ and $Z$ direction results in a combined acceleration of $|\overrightarrow{a}| = \sqrt{5^2+(-32)^2+(-55)^2} [m/s^2] \approx 63.332 [m/s^2]$. If a box is designed to handle an impact large enough to momentary expose it to $63.332 [m/s^2]$ multiplied by a given safety factor, then it would be viable to account for sensor error margins and say that any acceleration above $60 [m/s^2]$ should immediately trigger an alarm.
+
+Another method could be to assume that if somebody wanted to break the box, they would either break the box in one strike, or try to hit the box repeatedly with strikes that individually might not break the box but that combined might manage to break the bx due to material fatigue. If we divide the strike force that would immediately trigger an alarm (in this case $60 [m/s^2]$), by the estimated resistance to fatigue in a scale from 0 to 1 and raise it to the number of strikes you assume you would need to break the box using the assumed amount of needed repeated strikes. An example of this could be to do the calculation:
+
+$$a_{trigger} * {\rho_{fatigue}}^{n_{strikes}} \rightarrow 60 [m/s^2] * 0.9^5 \approx 35.43 [m/s^2] $$
+
+In this example then $5$ repeated strikes of approximately $35.43 [m/s^2]$ will also trigger an alarm.
+
+If we continue to analyze the data, we can try using frequency analysis on the striking event hoping to find information not revealed by just graphing the data. One way to find the frequency values of the data to analyze is using Fourier analysis. Herein this figure \ref{fig:fourier_accelerometer_striking}.
+The Fourier analysis reveals to us the frequency components present in the accelerometer readings. This could
+provide insights into the characteristics of the
 impact and resulting vibrations.
-By analyzing the frequency distribution and
-identifying prominent peaks or patterns in the frequency domain,
-we can gain a deeper understanding of the
-dynamic response of the MediColbox to external forces.
 
 \begin{figure}[htbp]
     \centering
@@ -52,6 +60,8 @@ dynamic response of the MediColbox to external forces.
     \caption{Fourier analysis of accelerometer data during the striking event}
     \label{fig:fourier_accelerometer_striking}
 \end{figure}
+
+Looking at the Fourier transformed data no additional information could be extrapolated from the data, that wasn't already discussed from the untransformed data.
 
 \clearpage
 \subsubsection{Dropping the MediColbox}
