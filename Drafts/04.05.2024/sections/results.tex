@@ -66,13 +66,10 @@ Looking at the Fourier transformed data no additional information could be extra
 \clearpage
 \subsubsection{Dropping the MediColbox}
 
-The accelerometer data collected when the MediColbox was
-dropped from a table is presented in
+The accelerometer data, collected when the MediColbox was slowly and carefully
+pushed off of a table, is presented in
 Figure \ref{fig:accelerometer_dropping}.
-The data showed a sudden increase in acceleration when the
-MediColbox was released,
-followed by a deceleration as it came into contact with the
-surface. The maximum acceleration value recorded during the
+The maximum acceleration value recorded during the
 drop was
 $X = -7.7 [m/s^2]$, $Y = 35 [m/s^2]$, $Z = -50.7 [m/s^2]$,
 which occurred at $t = 5.1[s]$.
@@ -86,13 +83,34 @@ acceleration changes associated with the dropping event.
     \label{fig:accelerometer_dropping}
 \end{figure}
 
-The Fourier analysis of the accelerometer data during the
-dropping event is shown in
-Figure \ref{fig:fourier_accelerometer_dropping}.
-The Fourier analysis allows us to examine the
-frequency components present in the accelerometer readings and
-provides insights into the characteristics of the
-drop and resulting vibrations.
+Analyzing the data similarly to how we did at the striking event we find that in this case we have a total peak acceleration of $|\overrightarrow{a}| \approx 62 [m/s^2]$ this would already trigger the previously set trigger criteria of $60 [m/s^2]$, also, if we continue looking we see that approximately $t=5$ there appears to be no acceleration meassured, this is what is called a "free-fall" a reference frame of which no acceleration is observed to those in the free-falling frame of reference. \cite{Freefall_Encyclopædia_Britannica_2024}. However, looking at the gyroscope data from Figure \ref{fig:gyroscope_dropping} we can see that there is also a lot of rotational movement starting as early as $t=4$ this suggests that the Prototype is rolling of the edge of where it was dropped from.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{resources/figures/Gyro_drop.eps}
+    \caption{Gyroscope data during the dropping event}
+    \label{fig:gyroscope_dropping}
+\end{figure}
+
+If we integrate the Gyroscope's angular velocity over time to make position we get an estimate of pose visualized in Figure \ref{fig:pose_dropping}.
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{resources/figures/Pose_drop.eps}
+    \caption{Pose estimate during the dropping event}
+    \label{fig:pose_dropping}
+\end{figure}
+
+In the pose data we notice that the estimated pose changes by approximately $3.1 [rad]$ (about $180$ degrees) in between time $t=4$ and $t=4.7$ this strongly suggest that the Protoype has roled half a round around the $X$-axis. This is supported in how the acceleration (Figure \ref{fig:accelerometer_dropping}) shows the $Z$-axis changes from being positive to being negative.
+The pose changing in such drastic ways will be representative of how a box can be tipped over or turned around during an intrusion attempts when an intruder tries to figure out where to attack. Integrating position and velocity from acceleration and pose is also possible and combining the accumulated change in pose and the accumulated change in change of position might be valuable when the box wants to detect if somebody picks up the box and/or moves it to somewhere it shouldn't be. Using this we could theoretically set an area of where box is restricted to be within or outside.
+
+A problem with this is that differentiating between intrusion attempts and just any random regular use is near impossible, and combined with how accumulating values also result in accumulated error. This makes any estimate less accurate over time
+
+
+Movingon to the Fourier analysis of the accelerometer data during the
+dropping event (Figure \ref{fig:fourier_accelerometer_dropping}.)
+Here there is again little information to gain.
 
 \begin{figure}[htbp]
     \centering
