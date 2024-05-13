@@ -1,0 +1,62 @@
+
+    In this section, we outline the methodology for constructing the prototype control system for the \gls{medicolbox} and utilizing the Inertial Measurement Unit (IMU) in the Raspberry Pi Sense Hat.
+
+    \subsection{Prototype Construction}
+
+    The prototype control system is constructed using the following components:
+
+    \begin{itemize}
+        \item Single-board computer: Raspberry Pi 4B 8GB [9] as the CCU
+        \item Human-Machine Interface (HMI): 7-inch touchscreen [10]
+        \item Sensor Card: Raspberry Pi Sense Hat v1.0.0 [11] with an integrated IMU
+    \end{itemize}
+
+    The construction process involves the following steps:
+
+    \begin{enumerate}
+        \item Assemble the Raspberry Pi 4B, 7-inch touchscreen, and Raspberry Pi Sense Hat.
+        \item Connect the components according to the provided documentation and wiring diagrams.
+        \item Configure the software environment for the Raspberry Pi 4B and install the necessary libraries and drivers.
+        \item Establish communication between the CCU, HMI, and the sensor card by setting up appropriate interfaces and protocols.
+    \end{enumerate}
+
+    \subsection{Purpose of the Prototype}
+
+    The purpose of constructing the prototype control system is to leverage the IMU in the Raspberry Pi Sense Hat. The IMU provides precise motion sensing capabilities, which will be utilized for detecting intrusion attempts on the "MediColBox".
+
+    \subsection{Integration and Configuration}
+
+    To integrate the components, the following steps are performed:
+
+    \begin{enumerate}
+        \item Connect the Raspberry Pi 4B to the 7-inch touchscreen using the designated interface.
+        \item Install the necessary software and configure the touchscreen as the primary display for the CCU.
+        \item Connect the Raspberry Pi Sense Hat to the Raspberry Pi 4B using the GPIO pins.
+        \item Configure the Raspberry Pi Sense Hat to enable access to the IMU data.
+    \end{enumerate}
+
+    \subsection{Testing and Calibration}
+
+    After integration, the prototype control system undergoes testing and calibration:
+
+    \begin{enumerate}
+        \item Verify the proper functioning of the components by conducting initial tests and ensuring their responsiveness.
+        \item Calibrate the IMU in the Raspberry Pi Sense Hat to ensure accurate motion sensing measurements.
+        \item Conduct controlled experiments to evaluate the performance of the prototype system in detecting intrusion attempts.
+    \end{enumerate}
+
+    \subsection{Validation of Prototype}
+
+    The validation of the prototype control system involves:
+
+    \begin{enumerate}
+        \item Conducting comprehensive tests to assess the system's ability to detect intrusion attempts accurately.
+        \item Comparing the results obtained from the prototype system with known intrusion scenarios to evaluate its effectiveness.
+        \item Analyzing the system's response time, reliability, and accuracy in identifying and responding to intrusion attempts.
+    \end{enumerate}
+
+    \subsection{Documentation and Reproducibility}
+
+    All steps involved in constructing the prototype control system, including the setup, configuration, integration, and calibration, are thoroughly documented. Detailed instructions, wiring diagrams, and code snippets are provided to ensure the reproducibility of the prototype by other researchers or practitioners.
+
+    By following these guidelines, the prototype control system can be reproduced and further improved in future studies.
