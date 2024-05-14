@@ -3,12 +3,40 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
+\pagebreak
 \section{Background}
 
 This chapter presents the definition of the problem,
 scope of the problem,
 different solutions related to the problem and
 why this solution is chosen.
+
+\subsection{The \gls{medicolbox}}
+
+the \gls{medicolbox} is the medicine colletion part of Medretur’s solution for collecting medicine in an effort to prevent medicinal waste and damage.
+
+the \gls{medicolbox} is a box made by $8$ mm thick aluminium plates. It is $600$ by $600$ mm wide and $600$ mm high.
+On the side of it is a removable cart held together with internal locking mechanisms in steel designed to not pose a weak point on the box.
+the details related to design of the internal locking mechanism is concealed to maintain secure functinality, but it does lock the gap together in such a way that you cannot bend it open without already breaking the aluminium shell, but you might be able to jam it stuck and prevent functinality.
+
+On top of this box is bolted tight a wedge shaped lid, also $600$ by $600$ mm wide.
+The wedge shaped lid is $600$ mm high on the tallest section and $200$ mm high on the lowest section.
+on top of the lid is a touch screen posing as the \gls{hmi} and an opening designed to allow you to insert some medications for internal mechanisms to sort.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{resources/images/MediColBox.png}
+    \caption{render of the \gls{medicolbox} from before it was built}
+    \label{fig:medicolbox_render}
+\end{figure}
+
+The total weight of the \gls{medicolbox} is $86$ kg and the aluminium casing has been tested to sustain repeated impacts with an
+estimated force of $8 000$ N (this has been meassured using an internal accelerometer,
+meassuring the maximum total acceleration registered during the impact and multiplying that acceleration with the mass of $86$ kg.)
+In general Aluminium is a somewhat soft metal, so impacts may deform the box, but will most likely not manage to yield access to the inside of the box.
+
+Aluminium, being a soft and malleable material, is somewhat easy to cut, making it weak to the "universal key" constituting of a battery powered angle grinder with specialised cutting discs.
+
 
 \subsection{Definition of the problem}
 The problem is \gls{intrusion}, but is what is \gls{intrusion}?
@@ -23,9 +51,9 @@ especially:
 \enquote{the act of wrongfully entering upon, seizing,
 or taking possession of the property of another}\cite{definition-intrusion}
 
-In the context of the \gls{medicolbox},
-\gls{intrusion} refers to attempts to break into the collection system
-and gain access to the disposed medicines stored inside.
+In the context of the \gls{medicolbox}, the word
+"\gls{intrusion}" refers to attempts on breaking collection system
+in an effort to gain access to the disposed medicines stored inside.
 The \gls{medicolbox} contains medications that are
 expired or no longer needed, which can pose a danger to
 individuals if they are not disposed of properly\cite{peds}. 
