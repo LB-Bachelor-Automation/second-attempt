@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1715631735 "main.aux" "main.bbl" "main" 1715644886
+["bibtex main"] 1715631735 "main.aux" "main.bbl" "main" 1715645277
   "C:/Users/larsb/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1715644886 8885 20cb22473e9190eb8f23c2f20708e226 "pdflatex"
+  "main.aux" 1715645277 8885 20cb22473e9190eb8f23c2f20708e226 "pdflatex"
   "resources/references.bib" 1715631328 6181 31d3d9a3c0c8890acc7dff604c1c9544 ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1715644883 "d:/GIT_Repositories/second-attempt/Drafts/2024.05.13/main.tex" "main.pdf" "main" 1715644886
+["pdflatex"] 1715645275 "d:/GIT_Repositories/second-attempt/Drafts/2024.05.13/main.tex" "main.pdf" "main" 1715645277
   "C:/Users/larsb/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1715264924 82843 0dfb633d31d116d69810a45fe0c1fe08 ""
   "C:/Users/larsb/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1663662420 10785261 2113cbd9aa806a302775d588aa0af9e6 ""
   "C:/Users/larsb/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458477487 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -126,13 +126,13 @@
   "C:/Users/larsb/AppData/Local/Programs/MiKTeX/tex/latex/xfor/xfor.sty" 1233853356 2689 44855b72da58344b1c1d9b3087bce6ca ""
   "C:/Users/larsb/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "d:/GIT_Repositories/second-attempt/Drafts/2024.05.13/main.tex" 1715631328 2199 52fe24c579543a5d91d669898c3f8216 ""
-  "main.aux" 1715644886 8885 20cb22473e9190eb8f23c2f20708e226 "pdflatex"
+  "main.aux" 1715645277 8885 20cb22473e9190eb8f23c2f20708e226 "pdflatex"
   "main.bbl" 1715631735 4975 b392ea2eff1c1998c7ae2d6863b46fd7 "bibtex main"
   "main.gls" 1715631328 2346 1b930b7b85a6631a144de91a88f9af49 ""
-  "main.lof" 1715644886 1759 e94e29a4df8c5dbc5fff1ec3167d3f64 "pdflatex"
-  "main.lot" 1715644886 430 9c5695881ce8486fcdedffe31bfaef11 "pdflatex"
+  "main.lof" 1715645277 1759 e94e29a4df8c5dbc5fff1ec3167d3f64 "pdflatex"
+  "main.lot" 1715645277 430 9c5695881ce8486fcdedffe31bfaef11 "pdflatex"
   "main.tex" 1715631328 2199 52fe24c579543a5d91d669898c3f8216 ""
-  "main.toc" 1715644886 2331 255a840287c6cb408b165a62de042cf3 "pdflatex"
+  "main.toc" 1715645277 2331 255a840287c6cb408b165a62de042cf3 "pdflatex"
   "resources/enviroments.tex" 1715631328 206 94ce56c2b8fc45ef9ba9124a6523391a ""
   "resources/figures/Acceleration_drop.eps" 1715631328 44770 bdb9ad3d09c1c4e0b97cd76f348569b6 ""
   "resources/figures/Acceleration_sawing.eps" 1715631328 64237 a8deaa10a47136ed5b14913f08b387b2 ""
@@ -155,7 +155,7 @@
   "resources/preamble.tex" 1715631328 1165 afc7b5c929755e0b01735333a298c4a8 ""
   "sections/abstract.tex" 1715631328 3995 dcfd6696fa43e0d624098593442b7e74 ""
   "sections/acknowledgments.tex" 1715631328 584 e3f8d5d3d0e8c17ca49f7a460797b66f ""
-  "sections/background.tex" 1715644881 13096 a54fb70bb6bdf37cc4ec73cc6feab3bc ""
+  "sections/background.tex" 1715645274 13395 729d5d5ef8c4a82fd1486160e85413d5 ""
   "sections/conclusion.tex" 1715631328 2776 1d98ccdaf59296de732da26291bdece1 ""
   "sections/introduction.tex" 1715631328 4039 483e23112b64548e663cf5f30d0d94a5 ""
   "sections/methodology.tex" 1715631328 21770 a371e93d15bddf68a355c285a5d67ae1 ""
