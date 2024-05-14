@@ -1,0 +1,32 @@
+\contentsline {section}{Acknowledgments}{1}{}%
+\contentsline {section}{List of Figures}{3}{}%
+\contentsline {section}{List of Tables}{3}{}%
+\contentsline {section}{Glossary}{4}{}%
+\contentsline {section}{\numberline {I}Introduction}{4}{}%
+\contentsline {subsection}{\numberline {\mbox {I-A}}Background}{4}{}%
+\contentsline {subsection}{\numberline {\mbox {I-B}}Objectives}{5}{}%
+\contentsline {subsection}{\numberline {\mbox {I-C}}Limitations}{5}{}%
+\contentsline {subsection}{\numberline {\mbox {I-D}}Project Stakeholders}{5}{}%
+\contentsline {section}{\numberline {II}Background}{6}{}%
+\contentsline {subsection}{\numberline {\mbox {II-A}}The \gls {medicolbox}}{6}{}%
+\contentsline {subsection}{\numberline {\mbox {II-B}}Definition of the problem}{7}{}%
+\contentsline {section}{\numberline {III}Methodology}{9}{}%
+\contentsline {subsection}{\numberline {\mbox {III-A}}Phenomenon of Interest}{9}{}%
+\contentsline {subsection}{\numberline {\mbox {III-B}}Data Collection Methods}{9}{}%
+\contentsline {subsection}{\numberline {\mbox {III-C}}Prototype Construction}{11}{}%
+\contentsline {subsection}{\numberline {\mbox {III-D}}Sampling Strategy}{12}{}%
+\contentsline {subsection}{\numberline {\mbox {III-E}}Data Collection Procedures}{12}{}%
+\contentsline {subsection}{\numberline {\mbox {III-F}}Ethical Considerations}{14}{}%
+\contentsline {subsection}{\numberline {\mbox {III-G}}Data Analysis}{14}{}%
+\contentsline {subsection}{\numberline {\mbox {III-H}}Limitations}{15}{}%
+\contentsline {subsection}{\numberline {\mbox {III-I}}Tools and Technologies}{15}{}%
+\contentsline {subsection}{\numberline {\mbox {III-J}}Document Preparation}{16}{}%
+\contentsline {section}{\numberline {IV}Results}{16}{}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}Analysis of Accelerometer Data}{16}{}%
+\contentsline {subsubsection}{\numberline {\mbox {IV-A}1}Striking the MediColbox}{17}{}%
+\contentsline {subsubsection}{\numberline {\mbox {IV-A}2}Dropping the MediColbox}{19}{}%
+\contentsline {subsubsection}{\numberline {\mbox {IV-A}3}Sawing on the MediColbox}{22}{}%
+\contentsline {subsubsection}{\numberline {\mbox {IV-A}4}Shaking the MediColbox}{23}{}%
+\contentsline {subsection}{\numberline {\mbox {IV-B}}Discussion of Findings}{24}{}%
+\contentsline {section}{\numberline {V}Conclusion}{25}{}%
+\contentsline {section}{References}{26}{}%
