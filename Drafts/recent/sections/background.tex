@@ -25,7 +25,8 @@ on top of the lid is a touch screen posing as the \gls{hmi} and an opening desig
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.5\textwidth]{resources/images/MediColBox.png}
+    \includegraphics[width=0.5\textwidth]
+    {resources/images/MediColBox.png}
     \caption{render of the \gls{medicolbox} from before it was built}
     \label{fig:medicolbox_render}
 \end{figure}
@@ -35,8 +36,27 @@ estimated force of $8 000\;[N]$ (this has been meassured using an internal accel
 meassuring the maximum total acceleration registered during the impact and multiplying that acceleration with the mass of $86\;[kg]$.)
 In general Aluminium is a somewhat soft metal, so impacts may deform the box, but will most likely not manage to yield access to the inside of the box.
 
-Aluminium, being a soft and malleable material, is somewhat easy to cut, making it weak to the "universal key" constituting of a battery powered angle grinder with specialised cutting discs.
+Aluminium, being a soft and malleable material, is somewhat easy to cut,
+making it weak to the "universal key" constituting of
+a battery powered angle grinder with specialised cutting discs.
 
+Additionaly, the medicolbox is designed so that it will connect to $230 [V]$ Alternating current, but in case of power loss it can sustain operations, for an undisclosed length of time, while being powered by an internal battery.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]
+    {resources/images/MediColBox-power-distribution.png}
+    \caption{a diagram showing the power distribution in the \gls{medicolbox}}
+    \label{fig:MediColBox-power-distribution}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]
+    {resources/images/MediColBox-related-data-diagram.png}
+    \caption{a diagram showing the data structure in the \gls{medicolbox} that is related to thi thesis}
+    \label{fig:MediColBox-related-data-diagram}
+\end{figure}
 
 \subsection{Definition of the problem}
 The problem is \gls{intrusion}, but is what is \gls{intrusion}?
