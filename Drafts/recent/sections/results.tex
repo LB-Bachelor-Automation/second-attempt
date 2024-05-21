@@ -246,7 +246,7 @@ similar movements.
 Analysing the accelerometer data using Fourier analysis is shown in
 Figure \ref{fig:fourier_accelerometer_shaking}.
 The Fourier analysis shows $3$ peaks at frequencies
-near to $0.1\;[Hz]$, near to $1.8\;[Hz]$ and near $8.3\;[Hz]$.
+near to $0.1\;[Hz]$, near to $1.8\;[Hz]$ and near $8.3\;[Hz]$ these are the mayor frequency components of the sifter automatically shaking over time.
 
 
 \begin{figure}[htbp]
@@ -255,6 +255,22 @@ near to $0.1\;[Hz]$, near to $1.8\;[Hz]$ and near $8.3\;[Hz]$.
     \caption{Fourier analysis of accelerometer data during the shaking event}
     \label{fig:fourier_accelerometer_shaking}
 \end{figure}
+
+this looks like it could suffice to make another alarm triggering criteria,
+but to simplify the criteria,
+we can go back to looking at Figure \ref{fig:accelerometer_shaking} and
+look at the amplitude.
+referencing back to the striking event,
+we can state the found triggering criteria of
+$K_{strike} = 60\;[m/s^2]$ combined with
+$\rho_{fatigue} = 0.9$, $n_{strikes}=5$
+and $T_{totalCountingTime}=10\;[s]$
+
+Putting it again in the function:
+
+$$a_{Repeated} * {\rho_{fatigue}}^{n_{strikes}} \rightarrow 60 [m/s^2] * 0.9^5 \approx 35.43 [m/s^2] $$
+
+We result in $35.43\;[m/s^2]$ trigginering the counter, and the alarm triggering after the count of 5. Also, this should scale similarly with $K_{strike}$ as the mass of the object in question changes from the prototype to the MediColbox, as it was suggested during the striking event.
 
 \subsection{Discussion of Findings}
 
@@ -267,18 +283,19 @@ accelerative patterns associated with striking,
 dropping, sawing, and shaking the MediColbox.
 
 The findings suggest that the IMU is a reliable and
-effective sensor for detecting physical movements and vibrations,
-which are indicative of intrusion attempts.
+effective sensor for detecting striking, droppign and even angle grinding,
+which are indicative of intrusion attempts triggering an alarm.
 The accelerometer data recorded during the
 simulated scenarios showcased the IMU's sensitivity to
 changes in acceleration,
 enabling it to capture both high-impact events and
-subtle vibrations.
+subtle vibrations. it was not successfull at detecting sawing, so this may
+need a different approach or further study to detect and use for triggering an alarm.
 
 However, it is important to note that the analysis
 focused solely on the accelerometer data,
 and other data collected by the IMU,
-such as gyroscope or magnetometer readings,
+such as magnetometer readings,
 were not considered in this study.
 Further research could explore the
 integration of multiple sensor data to enhance the
@@ -288,7 +305,20 @@ Overall, the results indicate the potential of the IMU as
 a standalone solution for intrusion detection on the
 MediColbox. The findings support the feasibility of
 utilizing the IMU to enhance the security and protection of the
-MediColbox by effectively detecting and alerting on
-unauthorized access attempts.
+MediColbox by effectively detecting and alerting on many of the different
+unauthorized access attempts event though it. However,as it currentle stands, it should be used in combination with other meassures of preventing intrusion.
+
+\subsubsection{data and storage}
+
+The data gathered will need to be stored, but is there any good methods for soring the samples?
+
+On average, the current data format uses $6.6\;[KB/s]$ of data stored.
+If relating this to time recorded data this is equivalent to $396\;[KB]$ each minute, $23.76\;[GB]$ each hour, and $570.24\;[GB]$ each day.
+
+so we cannot store too much time back without needing massive storage systems or applying clever methods for data storage.
+
+One clever method is to only store a few seconds around the interesting events, like when it triggers an alarm. this will be applied to the medicolbox algorithm for gathering data for further studying.
+
+Another clever data method is to only store the change from the values from one point to another. this might doubl the computational power needed at each time, but it will allow for numbers using less bits, saving the data needed to be stored without loosign information. this method will also be applied to the medicolbox algorithm for gathering data for further studying.
 
 \end{document}
