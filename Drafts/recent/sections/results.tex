@@ -191,7 +191,7 @@ If the angle of the prototype in pith and/or roll, changes to become equal to, o
 
 \subsubsection{Sawing on the MediColbox}
 
-This event is tested by mounting the prototype to a wooden plank, and sawing in that plank using a hacksaw.
+This event is tested by mounting the prototype to a wooden plank, and manually sawing in that plank using a hacksaw.
 
 Figure \ref{fig:accelerometer_sawing} illustrates the
 accelerometer data recorded while sawing on the
@@ -200,6 +200,8 @@ The data exhibited periodic variations in acceleration
 corresponding to the back-and-forth sawing motion.
 The analysis of the data indicated a consistent pattern of
 acceleration changes during the sawing event. This suggests that the IMU was able to capture the vibrations and oscillations caused by the sawing action.
+
+the data seems like noise, so we might need to look at the Fourier analysis of the data.
 
 \begin{figure}[htbp]
     \centering
@@ -210,6 +212,8 @@ acceleration changes during the sawing event. This suggests that the IMU was abl
 
 The Fourier analysis of the accelerometer data during the sawing event is shown in Figure \ref{fig:fourier_accelerometer_sawing}. The Fourier analysis allows us to examine the frequency components present in the accelerometer readings and provides insights into the characteristics of the sawing action. By analyzing the frequency distribution and identifying prominent peaks or patterns in the frequency domain, we can gain a deeper understanding of the dynamic response of the MediColbox to the sawing forces.
 
+We see a large peak at $4000\;[m/s^2]$ at about $0.1\;[Hz]$ or about every $10\;[s]$. this appears to be the times when the hacksaw jammed in the wood, which happened about every 8 to 12 seconds when sawing. Even though it would be nice to assume athat an intrusion attampt done by a hacksaw would preiodically jam, we dont want to use this as a trigger. it seems too unreliable a phenomenon to trigger the alarm.
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{resources/figures/Fourier_acceleration_sawing.eps}
@@ -217,14 +221,13 @@ The Fourier analysis of the accelerometer data during the sawing event is shown 
     \label{fig:fourier_accelerometer_sawing}
 \end{figure}
 
-\clearpage
+\vspace{30px}
 
 \subsubsection{Shaking the MediColbox}
 
-The accelerometer data obtained while shaking the
-MediColbox on a sifter,
-simulating cutting it with an angle grinder,
-is presented in Figure \ref{fig:accelerometer_shaking}.
+The accelerometer data is obtained by mounting the protoype to a sifter. 
+this shaking motion is suppoesd to simulate and intrusion attempt done by trying to cut the MediColbox with an angle grinder.
+the data is shown in Figure \ref{fig:accelerometer_shaking}.
 The data exhibited irregular and rapid fluctuations in
 acceleration due to the shaking motion.
 The analysis of the data demonstrated that the IMU was
@@ -240,16 +243,10 @@ similar movements.
     \label{fig:accelerometer_shaking}
 \end{figure}
 
-The Fourier analysis of the accelerometer data during the
-shaking event is shown in
+Analysing the accelerometer data using Fourier analysis is shown in
 Figure \ref{fig:fourier_accelerometer_shaking}.
-The Fourier analysis allows us to examine the
-frequency components present in the accelerometer readings and
-provides insights into the characteristics of the shaking motion.
-By analyzing the frequency distribution and
-identifying prominent peaks or patterns in the frequency domain,
-we can gain a deeper understanding of the
-dynamic response of the MediColbox to the shaking forces.
+The Fourier analysis shows $3$ peaks at frequencies
+near to $0.1\;[Hz]$, near to $1.8\;[Hz]$ and near $8.3\;[Hz]$.
 
 
 \begin{figure}[htbp]
