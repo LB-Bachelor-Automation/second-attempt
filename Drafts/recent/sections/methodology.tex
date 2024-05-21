@@ -267,18 +267,16 @@
 
     \subsection{Sampling Strategy}
 
-    For our study, we define a sampling strategy to ensure the
-    representation of different scenarios and potential risks associated with
+    For our study, we define a sampling strategy hoping to simulate the different scenarios associated with
     \gls{intrusion} attempts on the \gls{medicolbox}.
-    Our sample may include specific locations where the \gls{medicolbox} is deployed,
-    instances of reported \gls{intrusion} attempts,
-    or a combination of both. We strive to select a diverse sample that covers a range of
-    demographic and environmental factors to enhance the generalizability of our findings.
+    Our samples will include the prototype being exposed to scenarios that should emulate how the \gls{imu} would "see" the 
+    instances of related \gls{intrusion} attempts,
 
     \subsection{Data Collection Procedures}
 
-    To collect data on \gls{intrusion} attempts, we follow specific procedures to
-    ensure accuracy and completeness. These procedures involve implementing the
+    To collect data on \gls{intrusion} attempts, we could
+    use different methods for gathering data.
+    These methods involve implementing the
     following data collection methods (Table \ref{tab:DataCollectionMethods}):
 
     \begin{table}[htbp]
@@ -301,8 +299,50 @@
         \end{tabular}
     \end{table}
     
-    These procedures help us capture the necessary data for analysis and provide a
-    comprehensive understanding of \gls{intrusion} attempts on the \gls{medicolbox}.
+    All of these procedures could help us capture the necessary data for analysis and provide a
+    comprehensive understanding of \gls{intrusion} attempts on the \gls{medicolbox}. However, this study will solely study how the \gls{imu} stands on its own, which is why the prorotype is made to read the simulated scenarios.
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.4\textwidth]{resources/images/xxsensehat_axisinfo.png}
+        \caption{Visualisation of which axis points towards what direction in relation to the sensor card}
+        \label{fig:xxsensehat_axisinfo}
+    \end{figure}
+
+    The prototype is designed to gather a wide range of sensor data, which is stored in CSV format for subsequent analysis. The CSV file contains the following headers representing different measurements:
+
+    \begin{table}[htbp]
+        \centering
+        \caption{Format of the Sensor Data Collected by the Prototype}
+        \label{tab:PrototypeSensorData}
+        \begin{tabular}{|l|l|l|} \hline
+            \textbf{Header} & \textbf{Description} & \textbf{Unit} \\ \hline
+            timestamp & The date and time when the data was recorded & ISO 8601 \\ \hline
+            accelX & Accelerometer reading along the X-axis & fraction of g (local gravitational acceleration) \\ \hline
+            accelY & Accelerometer reading along the Y-axis & fraction of g (local gravitational acceleration) \\ \hline
+            accelZ & Accelerometer reading along the Z-axis & fraction of g (local gravitational acceleration) \\ \hline
+            gyroX & Gyroscope reading around the X-axis & radians/s \\ \hline
+            gyroY & Gyroscope reading around the Y-axis & radians/s \\ \hline
+            gyroZ & Gyroscope reading around the Z-axis & radians/s \\ \hline
+            compassX & Magnetometer reading along the X-axis & $\mu T$ (microteslas) \\ \hline
+            compassY & Magnetometer reading along the Y-axis & $\mu T$ (microteslas) \\ \hline
+            compassZ & Magnetometer reading along the Z-axis & $\mu T$ (microteslas) \\ \hline
+            fusionPoseX & Euler angle from sensor fusion along the X-axis & radians \\ \hline
+            fusionPoseY & Euler angle from sensor fusion along the Y-axis & radians \\ \hline
+            fusionPoseZ & Euler angle from sensor fusion along the Z-axis & radians \\ \hline
+            tiltHeading & Heading angle based on the tilt compensation & radians \\ \hline
+            pressure & Atmospheric pressure & hPa (hectopascals) \\ \hline
+            temperature & Ambient temperature & °C (Celsius) \\ \hline
+            humidity & Relative humidity & \% \\ \hline
+        \end{tabular}
+    \end{table}
+    
+    The dataset provided by the Prototype is all of the data the sensor card will provide.
+    Analysis of the data and understanding of the dynamics of
+    \gls{intrusion} attempts, should enable the development of more
+    robust security measures for the \gls{medicolbox}.
+
+    The fusionPose and the tiltHeader are estimated values and will not be used during this study. However, the fusionPose and the tiltHeader are mentioned so that for others reading through the svg files know what they are.
 
     \subsection{Ethical Considerations}
 
@@ -325,6 +365,7 @@
     
     \begin{itemize}
     \item Data preprocessing: The collected \gls{imu} data is preprocessed to ensure its quality and suitability for analysis. This may involve removing any noise or outliers, normalizing the data, and performing any necessary transformations to prepare it for further analysis.
+    
     \item Exploratory data analysis: We conduct exploratory data analysis to gain a better understanding of the \gls{imu} data. This involves visualizing the data, examining summary statistics, and identifying any patterns or trends that may be present. Exploratory analysis helps in identifying initial insights and forming hypotheses for further investigation.
 
     \item \gls{intrusion} detection algorithm: We develop or utilize an \gls{intrusion} detection algorithm that process the \gls{imu} data and identify potential \gls{intrusion} attempts. This algorithm is trained and validated using a suitable methodology to ensure its effectiveness in detecting unauthorized access based on the \gls{imu} readings.
@@ -353,42 +394,46 @@
         \item \textbf{Challenges in capturing all \gls{intrusion} attempts:} Some \gls{intrusion} attempts may go undetected or unreported, leading to potential underrepresentation in the collected data.
 
         \item \textbf{Generalizability of findings:} The context of the \gls{medicolbox} and the specific locations where it is deployed may influence the generalizability of the findings to other similar systems.
+        
+        \item \textbf{Resources avaiable:} the team working on this study is constituting of one singular bachelors student, very much both guided and helped along by one internal mentor. This poses a limit for both the amount of collective knowledge avialable and the work-hours the team has capacity for. Additionally, due a lack of external funding for the project, many a task, both planned and hoped for, had to be cut.
     \end{itemize}
     
-    We address these limitations by maximizing the available data,
-    selecting a diverse sample, and providing contextual information to aid in the
-    interpretation and application of our findings.
+    We address many of these limitations by selecting as much data as the
+    funding allowed for gathering, and by providing contextual information to
+    aid in the interpretation and application of our findings.
     
     By incorporating these elaborations into the methodology section,
-    we can effectively observe and analyze \gls{intrusion} attempts on the
-    \gls{medicolbox}, gaining insights into the methods,
-    motivations, and potential vulnerabilities associated with these attempts.
+    we should effectively be able to observe and analyze \gls{intrusion}
+    attempts on the \gls{medicolbox},
+    hopefully gaining insights into the methods, motivations,
+    and potential vulnerabilities associated with these attempts.
+    
     \subsection{Tools and Technologies}
 
-During the course of this study, the following tools and technologies were utilized:
+    During the course of this study, the following tools and technologies were utilized:
 
-\begin{itemize}
-    \item \textbf{LaTeX:} LaTeX, a typesetting system widely used in academia and scientific research, was used for document preparation. It provided powerful tools for creating professional-looking documents, including support for mathematical equations, figures, tables, and bibliographic references.
-    
-    \item \textbf{Visual Studio Code (VSCode):} VSCode, a versatile text editor, served as the primary tool for writing code, editing documents, and managing project files. It provided a user-friendly interface, syntax highlighting, code completion, and integration with version control systems like Git.
-    
-    \item \textbf{FreeCAD:} FreeCAD, an open-source computer-aided design (CAD) software, was utilized for designing and creating 3D models of the prototype. It enabled precise modeling and visualization of the physical components, ensuring accurate representation and construction.
-    
-    \item \textbf{GitHub:} GitHub, an open-source web-based platform for version control and collaboration, was used to track changes, collaborate with team members, and maintain the integrity and availability of project files. It provided a centralized repository for source code and project documentation.
-    
-    \item \textbf{Programming Languages:} The primary programming languages used in this study were Python and JavaScript. Python, an open-source language, was employed for data analysis, algorithm development, and system control, while JavaScript, also open-source, was utilized for web development and implementing the human-machine interface (HMI) functionality.
-    
-    \item \textbf{Electron:} Electron, an open-source framework for building cross-platform desktop applications, was utilized for developing the HMI. It enabled the integration of open-source web technologies (HTML, CSS, and JavaScript) into a standalone application, providing a responsive and user-friendly interface.
-\end{itemize}
+    \begin{itemize}
+        \item \textbf{LaTeX:} LaTeX, a typesetting system widely used in academia and scientific research, was used for document preparation. It provided powerful tools for creating professional-looking documents, including support for mathematical equations, figures, tables, and bibliographic references.
+        
+        \item \textbf{Visual Studio Code (VSCode):} VSCode, a versatile text editor, served as the primary tool for writing code, editing documents, and managing project files. It provided a user-friendly interface, syntax highlighting, code completion, and integration with version control systems like Git.
+        
+        \item \textbf{FreeCAD:} FreeCAD, an open-source computer-aided design (CAD) software, was utilized for designing and creating 3D models of the prototype. It enabled precise modeling and visualization of the physical components, ensuring accurate representation and construction.
+        
+        \item \textbf{GitHub:} GitHub, an open-source web-based platform for version control and collaboration, was used to track changes, collaborate with team members, and maintain the integrity and availability of project files. It provided a centralized repository for source code and project documentation.
+        
+        \item \textbf{Programming Languages:} The primary programming languages used in this study were Python and JavaScript. Python, an open-source language, was employed for data analysis, algorithm development, and system control, while JavaScript, also open-source, was utilized for web development and implementing the human-machine interface (HMI) functionality.
+        
+        \item \textbf{Electron:} Electron, an open-source framework for building cross-platform desktop applications, was utilized for developing the HMI. It enabled the integration of open-source web technologies (HTML, CSS, and JavaScript) into a standalone application, providing a responsive and user-friendly interface.
+    \end{itemize}
 
-These open-source tools and technologies played a crucial role in streamlining the research process, facilitating data analysis, and developing a functional prototype that aligns with the research objectives. By prioritizing open-source solutions, the study fostered collaboration, transparency, and accessibility, promoting the advancement of knowledge and encouraging community contributions.
+    These tools and technologies played a crucial role in streamlining the research process, facilitating data analysis, and developing a functional prototype that aligns with the research objectives. By prioritizing open-source solutions, the study fostered collaboration, transparency, and accessibility, promoting the advancement of knowledge and encouraging community contributions.
 
-\subsection{Document Preparation}
+    \subsection{Document Preparation}
 
-The document was prepared using LaTeX, an open-source typesetting system widely used in academia and scientific research. LaTeX provided powerful tools for creating professional-looking documents, including support for mathematical equations, figures, tables, and bibliographic references.
+    The document was prepared using LaTeX, an open-source typesetting system widely used in academia and scientific research. LaTeX provided powerful tools for creating professional-looking documents, including support for mathematical equations, figures, tables, and bibliographic references.
 
-To facilitate the writing process, Visual Studio Code (VSCode), an open-source text editor, was utilized as the primary tool. VSCode offered a range of features and extensions that enhanced productivity and provided a seamless writing experience. It enabled efficient collaboration, syntax highlighting, code completion, and integration with version control, ensuring the integrity and consistency of the document.
+    To facilitate the writing process, Visual Studio Code (VSCode), an open-source text editor, was utilized as the primary tool. VSCode offered a range of features and extensions that enhanced productivity and provided a seamless writing experience. It enabled efficient collaboration, syntax highlighting, code completion, and integration with version control, ensuring the integrity and consistency of the document.
 
-By leveraging open-source tools like LaTeX and VSCode, the study embraced the principles of openness, collaboration, and knowledge sharing, fostering innovation and contributing to the open-source community.
+    By leveraging open-source tools like LaTeX and VSCode, the study embraced the principles of openness, collaboration, and knowledge sharing, fostering innovation and contributing to the open-source community.
 
 \end{document}
